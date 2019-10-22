@@ -147,9 +147,9 @@ function august19_customize_register( $wp_customize ) {
     ));
 
     $wp_customize->add_control( 'footer_text', array(
-        'label' => __( 'Footer Text', 'august19' ),
+        'label' => __( 'Footer Text1', 'august19' ),
         'type' => 'textarea',
-        'section' => 'footer_section'
+        'section' => 'footer_section1'
     ));
 
     $wp_customize->add_section( 'august19_default_cs', array('title' => 'Default section'));
@@ -174,7 +174,7 @@ function august19_customize_register( $wp_customize ) {
         'label' => __( 'Image 1', 'august19' ),
         'type' => 'media',
         'mime_type' => 'image',
-        'section' => 'footer_section'
+        'section' => 'footer_section1'
     ) ) );
 
     $wp_customize->add_setting( 'footer_img2_link', array(
@@ -197,7 +197,7 @@ function august19_customize_register( $wp_customize ) {
         'label' => __( 'Image 2', 'august19' ),
         'type' => 'media',
         'mime_type' => 'image',
-        'section' => 'footer_section'
+        'section' => 'footer_section1'
     ) ) );
 
     $wp_customize->add_setting( 'footer_img3_link', array(
@@ -220,7 +220,7 @@ function august19_customize_register( $wp_customize ) {
         'label' => __( 'Image 3', 'august19' ),
         'type' => 'media',
         'mime_type' => 'image',
-        'section' => 'footer_section'
+        'section' => 'footer_section1'
     ) ) );
 
     /* Pinegrow generated Customizer Controls End */
