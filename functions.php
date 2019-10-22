@@ -138,6 +138,90 @@ function august19_customize_register( $wp_customize ) {
     // Do stuff with $wp_customize, the WP_Customize_Manager object.
 
     /* Pinegrow generated Customizer Controls Begin */
+    $pgwp_sanitize = function_exists('pgwp_sanitize_placeholder') ? 'pgwp_sanitize_placeholder' : null;
+
+    $wp_customize->add_setting( 'footer_text', array(
+        'type' => 'theme_mod',
+        'default' => __( 'Victor Frankenstein, a young scientist who creates a hideous, sapient creature in an unorthodox scientific experiment.', 'august19' ),
+        'sanitize_callback' => $pgwp_sanitize
+    ));
+
+    $wp_customize->add_control( 'footer_text', array(
+        'label' => __( 'Footer Text', 'august19' ),
+        'type' => 'textarea',
+        'section' => 'footer_section'
+    ));
+
+    $wp_customize->add_section( 'august19_default_cs', array('title' => 'Default section'));
+
+    $wp_customize->add_setting( 'footer_img1_link', array(
+        'type' => 'theme_mod',
+        'sanitize_callback' => $pgwp_sanitize
+    ));
+
+    $wp_customize->add_control( 'footer_img1_link', array(
+        'label' => __( 'Image 1 Link', 'august19' ),
+        'type' => 'url',
+        'section' => 'august19_default_cs'
+    ));
+
+    $wp_customize->add_setting( 'footer_img1', array(
+        'type' => 'theme_mod',
+        'sanitize_callback' => $pgwp_sanitize
+    ));
+
+    $wp_customize->add_control( new WP_Customize_Media_Control( $wp_customize, 'footer_img1', array(
+        'label' => __( 'Image 1', 'august19' ),
+        'type' => 'media',
+        'mime_type' => 'image',
+        'section' => 'footer_section'
+    ) ) );
+
+    $wp_customize->add_setting( 'footer_img2_link', array(
+        'type' => 'theme_mod',
+        'sanitize_callback' => $pgwp_sanitize
+    ));
+
+    $wp_customize->add_control( 'footer_img2_link', array(
+        'label' => __( 'Image 2 Link', 'august19' ),
+        'type' => 'url',
+        'section' => 'august19_default_cs'
+    ));
+
+    $wp_customize->add_setting( 'footer_img2', array(
+        'type' => 'theme_mod',
+        'sanitize_callback' => $pgwp_sanitize
+    ));
+
+    $wp_customize->add_control( new WP_Customize_Media_Control( $wp_customize, 'footer_img2', array(
+        'label' => __( 'Image 2', 'august19' ),
+        'type' => 'media',
+        'mime_type' => 'image',
+        'section' => 'footer_section'
+    ) ) );
+
+    $wp_customize->add_setting( 'footer_img3_link', array(
+        'type' => 'theme_mod',
+        'sanitize_callback' => $pgwp_sanitize
+    ));
+
+    $wp_customize->add_control( 'footer_img3_link', array(
+        'label' => __( 'Image 3 Link', 'august19' ),
+        'type' => 'url',
+        'section' => 'august19_default_cs'
+    ));
+
+    $wp_customize->add_setting( 'footer_img3', array(
+        'type' => 'theme_mod',
+        'sanitize_callback' => $pgwp_sanitize
+    ));
+
+    $wp_customize->add_control( new WP_Customize_Media_Control( $wp_customize, 'footer_img3', array(
+        'label' => __( 'Image 3', 'august19' ),
+        'type' => 'media',
+        'mime_type' => 'image',
+        'section' => 'footer_section'
+    ) ) );
 
     /* Pinegrow generated Customizer Controls End */
 

@@ -7,14 +7,16 @@
         <!-- Footer 13 -->         
         <footer class="footer_13 bg-dark pt-45 pb-60 color-white text-center text-lg-left"> 
             <div class="container px-xl-0"> 
-                <div class="lh-40 footer_links" data-aos-duration="500" data-aos="fade-down" data-aos-delay="0"> 
-                    <!-- <div><a href="#aboutAuthor" class="f-18 link color-white mb-15">About the author</a></div>
-			<div><a href="#testimonial" class="f-18 link color-white mb-15">Testimonials</a></div>
-			<div><a href="#pricingTable" class="f-18 link color-white mb-15">Book prices</a></div> -->                     
-                    <a href="#aboutAuthor" class="f-14 semibold text-uppercase sp-20 link color-white mr-10"><?php _e( 'About the author', 'august19' ); ?></a> 
-                    <a href="#testimonial" class="f-14 semibold text-uppercase sp-20 link color-white mx-10"><?php _e( 'Testimonials', 'august19' ); ?></a> 
-                    <a href="#pricingTable" class="f-14 semibold text-uppercase sp-20 link color-white mx-10"><?php _e( 'Book prices', 'august19' ); ?></a> 
-                </div>                 
+                <?php if ( has_nav_menu( 'social' ) ) : ?>
+                    <?php
+                        PG_Smart_Walker_Nav_Menu::$options['template'] = '<a class="f-14 semibold text-uppercase sp-20 link color-white mr-10 {CLASSES}" id="{ID}" {ATTRS}>{TITLE}</a>';
+                        wp_nav_menu( array(
+                            'container' => '',
+                            'theme_location' => 'social',
+                            'items_wrap' => '<div class="lh-40 footer_links %2$s" data-aos-duration="500" data-aos="fade-down" data-aos-delay="0" id="%1$s">%3$s</div>',
+                            'walker' => new PG_Smart_Walker_Nav_Menu()
+                    ) ); ?>
+                <?php endif; ?> 
                 <div data-aos-duration="500" data-aos="fade-down" data-aos-delay="0"> 
                     <div class="mt-35 mb-40 hr h-2 bg-white op-3"></div>                     
                 </div>                 
@@ -22,17 +24,17 @@
                     <div class="col-lg-7"> 
                         <div class="row"> 
                             <div class="col-xl-4 col-lg-5" data-aos-duration="500" data-aos="fade-down" data-aos-delay="0"> 
-                                <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/imgs/frank-logo-white.svg" alt="Frankenstein logo" height="40"> 
+                                <a href="<?php echo esc_url( get_home_url() ); ?>"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/imgs/frank-logo-white.svg" alt="Frankenstein logo" height="40"> </a> 
                             </div>                             
                             <div class="mt-15 mb-15 my-lg-0 col-xl-8 col-lg-7" data-aos-duration="500" data-aos="fade-down" data-aos-delay="250"> 
-                                <div class="text-adaptive"> 
-                                    <?php _e( 'Victor Frankenstein, a young scientist who creates a hideous, sapient creature in an unorthodox scientific experiment.', 'august19' ); ?> 
+                                <div class="text-adaptive">
+                                    <?php echo get_theme_mod( 'footer_text', __( 'Victor Frankenstein, a young scientist who creates a hideous, sapient creature in an unorthodox scientific experiment.', 'august19' ) ); ?>
                                 </div>                                 
                             </div>                             
                         </div>                         
                     </div>                     
                     <div class="col-lg-5 text-lg-right" data-aos-duration="500" data-aos="fade-down" data-aos-delay="500"> 
-                        <span class="d-inline-block socials"> <a href="#" class="link color-white mx-15"><i class="fab fa-twitter"></i></a> <a href="#" class="link color-white mx-15"><i class="fab fa-facebook-f"></i></a> <a href="#" class="link color-white ml-15"><i class="fab fa-google-plus-g"></i></a> </span> 
+                        <span class="d-inline-block socials"> <a href="<?php echo get_theme_mod( 'footer_img1_link', '#' ); ?>" class="link color-white mx-15"><img src="<?php echo PG_Image::getUrl( get_theme_mod( 'footer_img1', 'http://pinegrow.com/placeholders/img15.jpg' ), 'large' ) ?>" height="50"></a> <a href="<?php echo get_theme_mod( 'footer_img2_link', '#' ); ?>" class="link color-white mx-15"><img src="<?php echo PG_Image::getUrl( get_theme_mod( 'footer_img2', 'http://pinegrow.com/placeholders/img15.jpg' ), 'large' ) ?>" height="50"></a> <a href="<?php echo get_theme_mod( 'footer_img3_link', '#' ); ?>" class="link color-white ml-15"><img src="<?php echo PG_Image::getUrl( get_theme_mod( 'footer_img3', 'http://pinegrow.com/placeholders/img15.jpg' ), 'large' ) ?>" height="50"></a> </span> 
                     </div>                     
                 </div>                 
             </div>             
