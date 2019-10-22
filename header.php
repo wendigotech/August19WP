@@ -15,17 +15,18 @@
         <a class="open_menu bg-dark color-white radius_full"><i class="fas fa-bars lh-40"></i></a> 
         <div class="navigation_mobile bg-dark type3"> 
             <a class="close_menu color-white"><i class="fas fa-times"></i></a> 
-            <div class="px-40 pt-60 pb-60 inner"> 
-                <div>
-                    <a href="#aboutAuthor" class="f-18 link color-white mb-15"><?php _e( 'About the author', 'august19' ); ?></a>
-                </div>                 
-                <div>
-                    <a href="#testimonial" class="f-18 link color-white mb-15"><?php _e( 'Testimonials', 'august19' ); ?></a>
-                </div>                 
-                <div>
-                    <a href="#pricingTable" class="f-18 link color-white mb-15"><?php _e( 'Book prices', 'august19' ); ?></a>
-                </div>                 
-            </div>             
+            <?php if ( has_nav_menu( 'primary' ) ) : ?>
+                <?php
+                    PG_Smart_Walker_Nav_Menu::$options['template'] = '<div id="{ID}" class="{CLASSES}">
+                                        <a class="f-18 link color-white mb-15" {ATTRS}>{TITLE}</a>
+                                    </div>';
+                    wp_nav_menu( array(
+                        'container' => '',
+                        'theme_location' => 'primary',
+                        'items_wrap' => '<div class="px-40 pt-60 pb-60 inner %2$s" id="%1$s">%3$s</div>',
+                        'walker' => new PG_Smart_Walker_Nav_Menu()
+                ) ); ?>
+            <?php endif; ?> 
         </div>         
         <!-- Header 7 -->         
         <header class="bg-light header_7"> 
