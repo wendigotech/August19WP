@@ -36,9 +36,7 @@
                     <div class="mw-570"> 
                         <div class="row align-items-center"> 
                             <div class="col-lg-3" data-aos-duration="500" data-aos="fade-down" data-aos-delay="750"> 
-                                <div class="logo" href="<?php echo esc_url( home_url() ); ?>"> 
-                                    <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/imgs/frank-logo.svg" alt="Frankenstein logo" height="40"> 
-                                </div>                                 
+                                <a href="<?php echo esc_url( get_home_url() ); ?>"> <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/imgs/frank-logo.svg" alt="Frankenstein logo" height="70"></a> 
                             </div>                             
                             <?php if ( has_nav_menu( 'primary' ) ) : ?>
                                 <?php

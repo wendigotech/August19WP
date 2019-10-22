@@ -24,7 +24,7 @@
                     <div class="col-lg-7"> 
                         <div class="row"> 
                             <div class="col-xl-4 col-lg-5" data-aos-duration="500" data-aos="fade-down" data-aos-delay="0"> 
-                                <a href="<?php echo esc_url( get_home_url() ); ?>"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/imgs/frank-logo-white.svg" alt="Frankenstein logo" height="40"> </a> 
+                                <a href="<?php echo esc_url( get_home_url() ); ?>"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/imgs/frank-logo-white.svg" alt="Frankenstein logo" height="70"> </a> 
                             </div>                             
                             <div class="mt-15 mb-15 my-lg-0 col-xl-8 col-lg-7" data-aos-duration="500" data-aos="fade-down" data-aos-delay="250"> 
                                 <div class="text-adaptive">
@@ -34,7 +34,7 @@
                         </div>                         
                     </div>                     
                     <div class="col-lg-5 text-lg-right" data-aos-duration="500" data-aos="fade-down" data-aos-delay="500"> 
-                        <span class="d-inline-block socials"> <a href="<?php echo get_theme_mod( 'footer_img1_link', '#' ); ?>" class="link color-white mx-15"><img src="<?php echo PG_Image::getUrl( get_theme_mod( 'footer_img1', 'http://pinegrow.com/placeholders/img15.jpg' ), 'large' ) ?>" height="50"></a> <a href="<?php echo get_theme_mod( 'footer_img2_link', '#' ); ?>" class="link color-white mx-15"><img src="<?php echo PG_Image::getUrl( get_theme_mod( 'footer_img2', 'http://pinegrow.com/placeholders/img15.jpg' ), 'large' ) ?>" height="50"></a> <a href="<?php echo get_theme_mod( 'footer_img3_link', '#' ); ?>" class="link color-white ml-15"><img src="<?php echo PG_Image::getUrl( get_theme_mod( 'footer_img3', 'http://pinegrow.com/placeholders/img15.jpg' ), 'large' ) ?>" height="50"></a> </span> 
+                        <span class="d-inline-block socials"> <a href="<?php echo get_theme_mod( 'footer_img1_link', '#' ); ?>" class="link color-white mx-15"><img src="<?php echo PG_Image::getUrl( get_theme_mod( 'footer_img1', 'http://pinegrow.com/placeholders/img15.jpg' ), 'large' ) ?>" height="30"></a> <a href="<?php echo get_theme_mod( 'footer_img2_link', '#' ); ?>" class="link color-white mx-15"><img src="<?php echo PG_Image::getUrl( get_theme_mod( 'footer_img2', 'http://pinegrow.com/placeholders/img15.jpg' ), 'large' ) ?>" height="30"></a> <a href="<?php echo get_theme_mod( 'footer_img3_link', '#' ); ?>" class="link color-white ml-15"><img src="<?php echo PG_Image::getUrl( get_theme_mod( 'footer_img3', 'http://pinegrow.com/placeholders/img15.jpg' ), 'large' ) ?>" height="30"></a> </span> 
                     </div>                     
                 </div>                 
             </div>             
