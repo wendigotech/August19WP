@@ -138,6 +138,10 @@ function august19_customize_register( $wp_customize ) {
     // Do stuff with $wp_customize, the WP_Customize_Manager object.
 
     /* Pinegrow generated Customizer Controls Begin */
+
+    $wp_customize->add_section( 'footer_section', array(
+        'title' => __( 'Footer section', 'august19' )
+    ));
     $pgwp_sanitize = function_exists('pgwp_sanitize_placeholder') ? 'pgwp_sanitize_placeholder' : null;
 
     $wp_customize->add_setting( 'footer_text', array(
@@ -149,10 +153,8 @@ function august19_customize_register( $wp_customize ) {
     $wp_customize->add_control( 'footer_text', array(
         'label' => __( 'Footer Text1', 'august19' ),
         'type' => 'textarea',
-        'section' => 'footer_section1'
+        'section' => 'footer_section'
     ));
-
-    $wp_customize->add_section( 'august19_default_cs', array('title' => 'Default section'));
 
     $wp_customize->add_setting( 'footer_img1_link', array(
         'type' => 'theme_mod',
@@ -162,7 +164,7 @@ function august19_customize_register( $wp_customize ) {
     $wp_customize->add_control( 'footer_img1_link', array(
         'label' => __( 'Image 1 Link', 'august19' ),
         'type' => 'url',
-        'section' => 'august19_default_cs'
+        'section' => 'footer_section1'
     ));
 
     $wp_customize->add_setting( 'footer_img1', array(
@@ -185,7 +187,7 @@ function august19_customize_register( $wp_customize ) {
     $wp_customize->add_control( 'footer_img2_link', array(
         'label' => __( 'Image 2 Link', 'august19' ),
         'type' => 'url',
-        'section' => 'august19_default_cs'
+        'section' => 'footer_section1'
     ));
 
     $wp_customize->add_setting( 'footer_img2', array(
@@ -208,7 +210,7 @@ function august19_customize_register( $wp_customize ) {
     $wp_customize->add_control( 'footer_img3_link', array(
         'label' => __( 'Image 3 Link', 'august19' ),
         'type' => 'url',
-        'section' => 'august19_default_cs'
+        'section' => 'footer_section1'
     ));
 
     $wp_customize->add_setting( 'footer_img3', array(
