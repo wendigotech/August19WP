@@ -151,7 +151,7 @@ function august19_customize_register( $wp_customize ) {
     ));
 
     $wp_customize->add_control( 'footer_text', array(
-        'label' => __( 'Footer Text1', 'august19' ),
+        'label' => __( 'Footer Text', 'august19' ),
         'type' => 'textarea',
         'section' => 'footer_section'
     ));
@@ -164,7 +164,7 @@ function august19_customize_register( $wp_customize ) {
     $wp_customize->add_control( 'footer_img1_link', array(
         'label' => __( 'Image 1 Link', 'august19' ),
         'type' => 'url',
-        'section' => 'footer_section1'
+        'section' => 'footer_section'
     ));
 
     $wp_customize->add_setting( 'footer_img1', array(
@@ -176,7 +176,7 @@ function august19_customize_register( $wp_customize ) {
         'label' => __( 'Image 1', 'august19' ),
         'type' => 'media',
         'mime_type' => 'image',
-        'section' => 'footer_section1'
+        'section' => 'footer_section'
     ) ) );
 
     $wp_customize->add_setting( 'footer_img2_link', array(
@@ -187,7 +187,7 @@ function august19_customize_register( $wp_customize ) {
     $wp_customize->add_control( 'footer_img2_link', array(
         'label' => __( 'Image 2 Link', 'august19' ),
         'type' => 'url',
-        'section' => 'footer_section1'
+        'section' => 'footer_section'
     ));
 
     $wp_customize->add_setting( 'footer_img2', array(
@@ -199,7 +199,7 @@ function august19_customize_register( $wp_customize ) {
         'label' => __( 'Image 2', 'august19' ),
         'type' => 'media',
         'mime_type' => 'image',
-        'section' => 'footer_section1'
+        'section' => 'footer_section'
     ) ) );
 
     $wp_customize->add_setting( 'footer_img3_link', array(
@@ -210,7 +210,7 @@ function august19_customize_register( $wp_customize ) {
     $wp_customize->add_control( 'footer_img3_link', array(
         'label' => __( 'Image 3 Link', 'august19' ),
         'type' => 'url',
-        'section' => 'footer_section1'
+        'section' => 'footer_section'
     ));
 
     $wp_customize->add_setting( 'footer_img3', array(
@@ -222,7 +222,7 @@ function august19_customize_register( $wp_customize ) {
         'label' => __( 'Image 3', 'august19' ),
         'type' => 'media',
         'mime_type' => 'image',
-        'section' => 'footer_section1'
+        'section' => 'footer_section'
     ) ) );
 
     /* Pinegrow generated Customizer Controls End */
