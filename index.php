@@ -1,75 +1,82 @@
 <?php get_header(); ?>
 
-<section id="testimonials" class="testimonial_6 bg-main pt-105 pb-75 color-white text-center text-sm-left">
-    <div class="pg-empty-placeholder"></div>                 
+<section id="testimonials" class="testimonial_6 bg-main pt-105 pb-75 color-white text-center text-sm-left"> 
     <div class="container px-xl-0"> 
         <div class="row justify-content-center"> 
-            <div class="col-xl-10 col-lg-12 col-md-10" data-aos-duration="500" data-aos="fade-down" data-aos-delay="0"> 
-                <h2 class="mb-35 small"><?php _e( 'What our readers have to say', 'august19' ); ?></h2> 
+            <div class="col-xl-10 col-lg-12 col-md-10" data-aos-duration="500" data-aos="fade-down" data-aos-delay="0">
+                <h2 class="mb-35 small"><?php _e( 'Editor\'s choice', 'august19' ); ?></h2>
             </div>                         
         </div>                     
-        <div class="row align-items-stretch justify-content-center"> 
-            <div class="col-xl-1"></div>                         
-            <div class="mb-30 col-xl-5 col-lg-6 col-md-10 d-flex" data-aos-duration="500" data-aos="fade-down" data-aos-delay="0"> 
-                <div class="d-flex radius10 block"> 
-                    <div class="relative d-sm-flex align-items-stretch pl-35 pr-20 pt-35 pb-25 inner"> 
-                        <div class="relative ml-30 pb-35 info"> 
-                            <div class="f-18 medium text-adaptive"> 
-                                <?php _e( 'I would place the monster among the finest literary creations of all time. This singular manifestation of humanity’s scientific brilliance and callous indifference to the consequences thereof is masterfully done. Frankenstein’s “wretch” became the prototype of the literary outcast and every “misunderstood” creature since has been offspring from his loins.', 'august19' ); ?> 
+        <?php
+            $editors_args = array(
+                'category_name' => 'editors',
+                'order' => 'DESC'
+            )
+        ?>
+        <?php $editors = new WP_Query( $editors_args ); ?>
+        <?php if ( $editors->have_posts() ) : ?>
+            <div class="row align-items-stretch justify-content-center"> 
+                <div class="col-xl-1"></div>                             
+                <div class="mb-30 col-xl-5 col-lg-6 col-md-10 d-flex" data-aos-duration="500" data-aos="fade-down" data-aos-delay="0"> 
+                    <?php while ( $editors->have_posts() ) : $editors->the_post(); ?>
+                        <?php PG_Helper::rememberShownPost(); ?>
+                        <div class="d-flex radius10 block"> 
+                            <div class="relative d-sm-flex align-items-stretch pl-35 pr-20 pt-35 pb-25 inner">
+                                <?php the_content(); ?>
                             </div>                                         
-                            <div class="absolute f-14 semibold text-uppercase sp-20 op-3 author">
-                                <?php _e( 'Stephen K.', 'august19' ); ?>
+                        </div>
+                    <?php endwhile; ?>
+                    <?php wp_reset_postdata(); ?> 
+                </div>                             
+                <div class="mb-30 col-xl-5 col-lg-6 col-md-10 d-flex" data-aos-duration="500" data-aos="fade-down" data-aos-delay="250"> 
+                    <div class="d-flex radius10 block"> 
+                        <div class="relative d-sm-flex align-items-stretch pl-35 pr-20 pt-35 pb-25 inner"> 
+                            <div class="relative ml-30 pb-35 info"> 
+                                <div class="f-18 medium text-adaptive"> 
+                                    <?php _e( 'I’m astonished when I think that this work was written and published over 200 years ago. I easily give it five stars not only for its cultural impact, but also for the pioneering exploration which allowed future horror and science fiction to progress. If you are a horror or science fiction fan and you\'ve never read it, you must!', 'august19' ); ?> 
+                                </div>                                             
+                                <div class="absolute f-14 semibold text-uppercase sp-20 op-3 author">
+                                    <?php _e( 'Kevin Kuhn', 'august19' ); ?>
+                                </div>                                             
                             </div>                                         
                         </div>                                     
                     </div>                                 
                 </div>                             
-            </div>                         
-            <div class="mb-30 col-xl-5 col-lg-6 col-md-10 d-flex" data-aos-duration="500" data-aos="fade-down" data-aos-delay="250"> 
-                <div class="d-flex radius10 block"> 
-                    <div class="relative d-sm-flex align-items-stretch pl-35 pr-20 pt-35 pb-25 inner"> 
-                        <div class="relative ml-30 pb-35 info"> 
-                            <div class="f-18 medium text-adaptive"> 
-                                <?php _e( 'I’m astonished when I think that this work was written and published over 200 years ago. I easily give it five stars not only for its cultural impact, but also for the pioneering exploration which allowed future horror and science fiction to progress. If you are a horror or science fiction fan and you\'ve never read it, you must!', 'august19' ); ?> 
-                            </div>                                         
-                            <div class="absolute f-14 semibold text-uppercase sp-20 op-3 author">
-                                <?php _e( 'Kevin Kuhn', 'august19' ); ?>
-                            </div>                                         
-                        </div>                                     
-                    </div>                                 
-                </div>                             
-            </div>                         
-            <div class="col-xl-1"></div>                         
-            <div class="col-xl-1"></div>                         
-            <div class="mb-30 col-xl-5 col-lg-6 col-md-10 d-flex" data-aos-duration="500" data-aos="fade-down" data-aos-delay="0"> 
-                <div class="d-flex radius10 block"> 
-                    <div class="relative d-sm-flex align-items-stretch pl-35 pr-20 pt-35 pb-25 inner"> 
-                        <div class="relative ml-30 pb-35 info"> 
-                            <div class="f-18 medium text-adaptive"> 
-                                <?php _e( 'I really like Mary Shelley\'s writing style. Frankenstein is one of my favourites!', 'august19' ); ?> 
-                            </div>                                         
-                            <div class="absolute f-14 semibold text-uppercase sp-20 op-3 author">
-                                <?php _e( 'Hasham Rasool', 'august19' ); ?>
+                <div class="col-xl-1"></div>                             
+                <div class="col-xl-1"></div>                             
+                <div class="mb-30 col-xl-5 col-lg-6 col-md-10 d-flex" data-aos-duration="500" data-aos="fade-down" data-aos-delay="0"> 
+                    <div class="d-flex radius10 block"> 
+                        <div class="relative d-sm-flex align-items-stretch pl-35 pr-20 pt-35 pb-25 inner"> 
+                            <div class="relative ml-30 pb-35 info"> 
+                                <div class="f-18 medium text-adaptive"> 
+                                    <?php _e( 'I really like Mary Shelley\'s writing style. Frankenstein is one of my favourites!', 'august19' ); ?> 
+                                </div>                                             
+                                <div class="absolute f-14 semibold text-uppercase sp-20 op-3 author">
+                                    <?php _e( 'Hasham Rasool', 'august19' ); ?>
+                                </div>                                             
                             </div>                                         
                         </div>                                     
                     </div>                                 
                 </div>                             
-            </div>                         
-            <div class="mb-30 col-xl-5 col-lg-6 col-md-10 d-flex" data-aos-duration="500" data-aos="fade-down" data-aos-delay="250"> 
-                <div class="d-flex radius10 block"> 
-                    <div class="relative d-sm-flex align-items-stretch pl-35 pr-20 pt-35 pb-25 inner"> 
-                        <div class="relative ml-30 pb-35 info"> 
-                            <div class="f-18 medium text-adaptive"> 
-                                <?php _e( 'One of the most powerful books I have ever read that speaks so much about compassion and humanity.', 'august19' ); ?> 
-                            </div>                                         
-                            <div class="absolute f-14 semibold text-uppercase sp-20 op-3 author">
-                                <?php _e( 'Whitney Atkinson', 'august19' ); ?>
+                <div class="mb-30 col-xl-5 col-lg-6 col-md-10 d-flex" data-aos-duration="500" data-aos="fade-down" data-aos-delay="250"> 
+                    <div class="d-flex radius10 block"> 
+                        <div class="relative d-sm-flex align-items-stretch pl-35 pr-20 pt-35 pb-25 inner"> 
+                            <div class="relative ml-30 pb-35 info"> 
+                                <div class="f-18 medium text-adaptive"> 
+                                    <?php _e( 'One of the most powerful books I have ever read that speaks so much about compassion and humanity.', 'august19' ); ?> 
+                                </div>                                             
+                                <div class="absolute f-14 semibold text-uppercase sp-20 op-3 author">
+                                    <?php _e( 'Whitney Atkinson', 'august19' ); ?>
+                                </div>                                             
                             </div>                                         
                         </div>                                     
                     </div>                                 
                 </div>                             
-            </div>                         
-            <div class="col-xl-1"></div>                         
-        </div>                     
+                <div class="col-xl-1"></div>                             
+            </div>
+        <?php else : ?>
+            <p><?php _e( 'Sorry, no posts matched your criteria.', 'august19' ); ?></p>
+        <?php endif; ?> 
     </div>                 
 </section>
 <section class="call_to_action_11 bg-dark color-white text-center text-lg-left"> 
