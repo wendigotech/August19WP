@@ -1,5 +1,7 @@
 
-        </div>         
+            </div>
+        </header>                  
+        <!-- Testimonial 6 -->                  
         <!-- Call to Action 11 -->         
         <!-- Content 15 -->         
         <!-- Showcase 10 -->         

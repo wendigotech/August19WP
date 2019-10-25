@@ -28,7 +28,7 @@
                 ) ); ?>
             <?php endif; ?> 
         </div>         
-        <!-- Header 7 -->         
+        <!-- Header 7 -->
         <header class="bg-light header_7"> 
             <!-- Header Menu 7 -->             
             <nav class="header_menu_7 pt-30 pb-30 mt-40"> 
@@ -51,7 +51,5 @@
                         </div>                         
                     </div>                     
                 </div>                 
-            </nav>                          
-        </header>         
-        <!-- Testimonial 6 -->         
-        <div>
+            </nav>
+            <div>
