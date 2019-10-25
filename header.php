@@ -51,23 +51,7 @@
                         </div>                         
                     </div>                     
                 </div>                 
-            </nav>             
-            <div class="container px-xl-0 relative text-center text-md-left"> 
-                <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/imgs/green-frank-bg.jpg" class="d-none d-md-block ml-700 h-full absolute header_7_bg" alt="Frankenstein's monster. Source: https://wallpaperplay.com/board/frankenstein-wallpapers" data-aos-duration="500" data-aos="fade-down" data-aos-delay="750"/> 
-                <div class="mw-570 pt-230 pb-165 inner"> 
-                    <div class="mb-3 logo d-block d-xl-none logo_mobile">
-                        <a href="<?php echo esc_url( get_home_url() ); ?>"> <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/imgs/frank-logo.svg" alt="Frankenstein logo" height="60"></a>
-                    </div>                     
-                    <h1 data-aos-duration="500" data-aos="fade-down" data-aos-delay="0"><?php _e( 'What does it mean to be human?', 'august19' ); ?></h1> 
-                    <div class="mt-20 mw-500 color-heading f-18 medium op-7 text-adaptive"> 
-                        <span data-aos-duration="500" data-aos="fade-down" data-aos-delay="250"><?php _e( 'Not only a terrifying story but one that raises profound, disturbing questions about the very nature of life and the place of humankind within the cosmos.', 'august19' ); ?></span> 
-                    </div>                     
-                    <div class="mt-70 d-block d-sm-flex flex-wrap justify-content-center justify-content-md-start buttons" data-aos-duration="500" data-aos="fade-down" data-aos-delay="500"> 
-                        <a href="#pricingTable" class="btn lg action-1"><?php _e( 'Get a copy', 'august19' ); ?></a> 
-                        <a href="#testimonials" class="ml-10 btn lg border-gray color-main"><?php _e( 'Read the reviews', 'august19' ); ?></a> 
-                    </div>                     
-                </div>                 
-            </div>             
+            </nav>                          
         </header>         
         <!-- Testimonial 6 -->         
         <div>

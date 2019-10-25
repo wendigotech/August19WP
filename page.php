@@ -1,90 +1,20 @@
 <?php get_header(); ?>
 
-<div class="container px-xl-0 relative text-center text-md-left"> 
-    <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/imgs/green-frank-bg.jpg" class="d-none d-md-block ml-700 h-full absolute header_7_bg" alt="Frankenstein's monster. Source: https://wallpaperplay.com/board/frankenstein-wallpapers" data-aos-duration="500" data-aos="fade-down" data-aos-delay="750"/> 
-    <div class="mw-570 pt-230 pb-165 inner"> 
+<div class="container px-xl-0 relative text-center text-md-left">                  
+    <div class="pb-165 inner pt-230"> 
         <div class="mb-3 logo d-block d-xl-none logo_mobile">
-            <a href="<?php echo esc_url( get_home_url() ); ?>"> <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/imgs/frank-logo.svg" alt="Frankenstein logo" height="60"></a>
+            <a href="<?php echo esc_url( get_home_url() ); ?>"> <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/imgs/frank-logo.svg" alt="Frankenstein logo" height="40"></a>
         </div>                     
-        <h1 data-aos-duration="500" data-aos="fade-down" data-aos-delay="0"><?php _e( 'What does it mean to be human?', 'august19' ); ?></h1> 
+        <h1 data-aos-duration="500" data-aos="fade-down" data-aos-delay="0"><?php the_title(); ?></h1> 
         <div class="mt-20 mw-500 color-heading f-18 medium op-7 text-adaptive"> 
-            <span data-aos-duration="500" data-aos="fade-down" data-aos-delay="250"><?php _e( 'Not only a terrifying story but one that raises profound, disturbing questions about the very nature of life and the place of humankind within the cosmos.', 'august19' ); ?></span> 
-        </div>                     
-        <div class="mt-70 d-block d-sm-flex flex-wrap justify-content-center justify-content-md-start buttons" data-aos-duration="500" data-aos="fade-down" data-aos-delay="500"> 
-            <a href="#pricingTable" class="btn lg action-1"><?php _e( 'Get a copy', 'august19' ); ?></a> 
-            <a href="#testimonials" class="ml-10 btn lg border-gray color-main"><?php _e( 'Read the reviews', 'august19' ); ?></a> 
-        </div>                     
+            <span data-aos-duration="500" data-aos="fade-down" data-aos-delay="250"><?php echo get_the_excerpt(); ?></span> 
+        </div>                                          
     </div>                 
 </div>
-<section id="testimonials" class="testimonial_6 bg-main pt-105 pb-75 color-white text-center text-sm-left"> 
-    <div class="container px-xl-0"> 
-        <div class="row justify-content-center"> 
-            <div class="col-xl-10 col-lg-12 col-md-10" data-aos-duration="500" data-aos="fade-down" data-aos-delay="0">
-                <h2 class="mb-35 small"><?php _e( 'Editor\'s choice', 'august19' ); ?></h2>
-            </div>                         
-        </div>                     
-        <div class="row align-items-stretch justify-content-center"> 
-            <div class="col-xl-1"></div>                         
-            <div class="mb-30 col-xl-5 col-lg-6 col-md-10 d-flex" data-aos-duration="500" data-aos="fade-down" data-aos-delay="0"> 
-                <div class="d-flex radius10 block"> 
-                    <div class="relative d-sm-flex align-items-stretch pl-35 pr-20 pt-35 pb-25 inner"> 
-                        <div class="relative ml-30 pb-35 info"> 
-                            <div class="f-18 medium text-adaptive"> 
-                                <?php _e( 'I would place the monster among the finest literary creations of all time. This singular manifestation of humanity’s scientific brilliance and callous indifference to the consequences thereof is masterfully done. Frankenstein’s “wretch” became the prototype of the literary outcast and every “misunderstood” creature since has been offspring from his loins.', 'august19' ); ?> 
-                            </div>                                         
-                            <div class="absolute f-14 semibold text-uppercase sp-20 op-3 author">
-                                <?php _e( 'Stephen K.', 'august19' ); ?>
-                            </div>                                         
-                        </div>                                     
-                    </div>                                 
-                </div>                             
-            </div>                         
-            <div class="mb-30 col-xl-5 col-lg-6 col-md-10 d-flex" data-aos-duration="500" data-aos="fade-down" data-aos-delay="250"> 
-                <div class="d-flex radius10 block"> 
-                    <div class="relative d-sm-flex align-items-stretch pl-35 pr-20 pt-35 pb-25 inner"> 
-                        <div class="relative ml-30 pb-35 info"> 
-                            <div class="f-18 medium text-adaptive"> 
-                                <?php _e( 'I’m astonished when I think that this work was written and published over 200 years ago. I easily give it five stars not only for its cultural impact, but also for the pioneering exploration which allowed future horror and science fiction to progress. If you are a horror or science fiction fan and you\'ve never read it, you must!', 'august19' ); ?> 
-                            </div>                                         
-                            <div class="absolute f-14 semibold text-uppercase sp-20 op-3 author">
-                                <?php _e( 'Kevin Kuhn', 'august19' ); ?>
-                            </div>                                         
-                        </div>                                     
-                    </div>                                 
-                </div>                             
-            </div>                         
-            <div class="col-xl-1"></div>                         
-            <div class="col-xl-1"></div>                         
-            <div class="mb-30 col-xl-5 col-lg-6 col-md-10 d-flex" data-aos-duration="500" data-aos="fade-down" data-aos-delay="0"> 
-                <div class="d-flex radius10 block"> 
-                    <div class="relative d-sm-flex align-items-stretch pl-35 pr-20 pt-35 pb-25 inner"> 
-                        <div class="relative ml-30 pb-35 info"> 
-                            <div class="f-18 medium text-adaptive"> 
-                                <?php _e( 'I really like Mary Shelley\'s writing style. Frankenstein is one of my favourites!', 'august19' ); ?> 
-                            </div>                                         
-                            <div class="absolute f-14 semibold text-uppercase sp-20 op-3 author">
-                                <?php _e( 'Hasham Rasool', 'august19' ); ?>
-                            </div>                                         
-                        </div>                                     
-                    </div>                                 
-                </div>                             
-            </div>                         
-            <div class="mb-30 col-xl-5 col-lg-6 col-md-10 d-flex" data-aos-duration="500" data-aos="fade-down" data-aos-delay="250"> 
-                <div class="d-flex radius10 block"> 
-                    <div class="relative d-sm-flex align-items-stretch pl-35 pr-20 pt-35 pb-25 inner"> 
-                        <div class="relative ml-30 pb-35 info"> 
-                            <div class="f-18 medium text-adaptive"> 
-                                <?php _e( 'One of the most powerful books I have ever read that speaks so much about compassion and humanity.', 'august19' ); ?> 
-                            </div>                                         
-                            <div class="absolute f-14 semibold text-uppercase sp-20 op-3 author">
-                                <?php _e( 'Whitney Atkinson', 'august19' ); ?>
-                            </div>                                         
-                        </div>                                     
-                    </div>                                 
-                </div>                             
-            </div>                         
-            <div class="col-xl-1"></div>                         
-        </div>                     
+<section id="testimonials" class="testimonial_6 bg-main pt-105 pb-75 color-white text-center text-sm-left">
+    <div class="pg-empty-placeholder"></div>                 
+    <div class="container px-xl-0">
+        <?php the_content(); ?>
     </div>                 
 </section>
 <section class="call_to_action_11 bg-dark color-white text-center text-lg-left"> 
