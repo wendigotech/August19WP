@@ -42,16 +42,12 @@
                                 <nav class="navbar navbar-expand-md navbar-light bg-light">
                                     <div class="collapse navbar-collapse" id="navbarNavDropdown">
                                         <?php if ( has_nav_menu( 'primary' ) ) : ?>
-                                            <?php
-                                                PG_Smart_Walker_Nav_Menu::$options['template'] = '<li class="nav-item {CLASSES}" id="{ID}">
-                                                        <a class="nav-link" {ATTRS}>{TITLE}<span class="sr-only">(current)</span></a>
-                                                      </li>';
-                                                PG_Smart_Walker_Nav_Menu::$options['current_class'] = 'active';
-                                                wp_nav_menu( array(
+                                            <?php wp_nav_menu( array(
+                                                    'menu_class' => 'navbar-nav',
                                                     'container' => '',
                                                     'theme_location' => 'primary',
-                                                    'items_wrap' => '<ul class="navbar-nav %2$s" id="%1$s">%3$s</ul>',
-                                                    'walker' => new PG_Smart_Walker_Nav_Menu()
+                                                    'fallback_cb' => 'wp_bootstrap4_navwalker::fallback',
+                                                    'walker' => new wp_bootstrap4_navwalker()
                                             ) ); ?>
                                         <?php endif; ?>
                                     </div>
