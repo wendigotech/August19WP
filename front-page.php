@@ -46,35 +46,7 @@
                 <?php endwhile; ?>
                 <?php wp_reset_postdata(); ?>                                  
                 <div class="col-xl-1"></div>                                 
-                <div class="col-xl-1"></div>                                 
-                <div class="mb-30 col-xl-5 col-lg-6 col-md-10 d-flex" data-aos-duration="500" data-aos="fade-down" data-aos-delay="0"> 
-                    <div class="d-flex radius10 block"> 
-                        <div class="relative d-sm-flex align-items-stretch pl-35 pr-20 pt-35 pb-25 inner"> 
-                            <div class="relative ml-30 pb-35 info"> 
-                                <div class="f-18 medium text-adaptive"> 
-                                    <?php _e( 'I really like Mary Shelley\'s writing style. Frankenstein is one of my favourites!', 'august19' ); ?> 
-                                </div>                                                 
-                                <div class="absolute f-14 semibold text-uppercase sp-20 op-3 author">
-                                    <?php _e( 'Hasham Rasool', 'august19' ); ?>
-                                </div>                                                 
-                            </div>                                             
-                        </div>                                         
-                    </div>                                     
-                </div>                                 
-                <div class="mb-30 col-xl-5 col-lg-6 col-md-10 d-flex" data-aos-duration="500" data-aos="fade-down" data-aos-delay="250"> 
-                    <div class="d-flex radius10 block"> 
-                        <div class="relative d-sm-flex align-items-stretch pl-35 pr-20 pt-35 pb-25 inner"> 
-                            <div class="relative ml-30 pb-35 info"> 
-                                <div class="f-18 medium text-adaptive"> 
-                                    <?php _e( 'One of the most powerful books I have ever read that speaks so much about compassion and humanity.', 'august19' ); ?> 
-                                </div>                                                 
-                                <div class="absolute f-14 semibold text-uppercase sp-20 op-3 author">
-                                    <?php _e( 'Whitney Atkinson', 'august19' ); ?>
-                                </div>                                                 
-                            </div>                                             
-                        </div>                                         
-                    </div>                                     
-                </div>                                 
+                <div class="col-xl-1"></div>                                                                                                   
                 <div class="col-xl-1"></div>                                 
             </div>
         <?php else : ?>

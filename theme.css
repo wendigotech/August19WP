@@ -35,3 +35,11 @@ a:hover,
 a:focus {
     background-size: 100% 2px;
 }
+
+.dropdown,
+.dropleft,
+.dropright,
+.dropup {
+    position: relative;
+    transition: all 2s;
+}
