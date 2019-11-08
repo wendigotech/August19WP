@@ -23,7 +23,10 @@
                     <div data-aos-duration="500" data-aos="fade-down" data-aos-delay="0">
                         <?php dynamic_sidebar( 'footer_widget' ); ?>
                     </div>
-                <?php endif; ?> 
+                <?php endif; ?>
+                <div data-aos-duration="500" data-aos="fade-down" data-aos-delay="0"> 
+                    <div class="mt-35 mb-40 hr h-2 bg-white op-3"></div>                     
+                </div>                 
                 <div class="row"> 
                     <div class="col-lg-7"> 
                         <div class="row"> 
