@@ -125,6 +125,15 @@ function august19_widgets_init() {
      */
     /* Pinegrow generated Register Sidebars Begin */
 
+    register_sidebar( array(
+        'name' => __( 'Footer widget', 'august19' ),
+        'id' => 'footer_widget',
+        'before_widget' => '<li id="%1$s" class="widget %2$s">',
+        'after_widget' => '</li>',
+        'before_title' => '<h3 class="widgettitle">',
+        'after_title' => '</h3>'
+    ) );
+
     /* Pinegrow generated Register Sidebars End */
 }
 add_action( 'widgets_init', 'august19_widgets_init' );
