@@ -40,7 +40,75 @@
                             </div>                             
                             <?php if ( has_nav_menu( 'primary' ) ) : ?>
                                 <?php
-                                    PG_Smart_Walker_Nav_Menu::$options['template'] = '<a class="link color-heading medium ml-35 {CLASSES}" id="{ID}" {ATTRS}>{TITLE}</a>';
+                                    PG_Smart_Walker_Nav_Menu::$options['template'] = '<nav class="navbar navbar-expand-md navbar-light bg-light {CLASSES}" data-pg-collapsed id="{ID}">
+                                        <div class="collapse navbar-collapse" id="navbarNavDropdown" data-pg-collapsed>
+                                            <ul class="navbar-nav">
+                                                <li class="nav-item active">
+                                                    <a class="nav-link" {ATTRS}>{TITLE}<span class="sr-only">(current)</span></a>
+                                                </li>
+                                                <li class="nav-item">
+                                                    <a class="nav-link" href="#">Link</a>
+                                                </li>
+                                                <li class="nav-item">
+                                                    <a class="nav-link" href="#">Link</a>
+                                                </li>
+                                                <li class="nav-item dropdown">
+                                                    <a class="nav-link dropdown-toggle" href="http://example.com" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                              Dropdown </a>
+                                                    <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                                        <li>
+                                                            <a class="dropdown-item" href="#">Action</a>
+                                                        </li>
+                                                        <li>
+                                                            <a class="dropdown-item" href="#">Another action</a>
+                                                        </li>
+                                                        <li class="dropdown-submenu">
+                                                            <a class="dropdown-item dropdown-toggle" href="http://google.com">Google</a>
+                                                            <ul class="dropdown-menu">
+                                                                <li>
+                                                                    <a class="dropdown-item" href="#">Submenu</a>
+                                                                </li>
+                                                                <li>
+                                                                    <a class="dropdown-item" href="#">Submenu0</a>
+                                                                </li>
+                                                                <li class="dropdown-submenu">
+                                                                    <a class="dropdown-item dropdown-toggle" href="#">Submenu 1</a>
+                                                                    <ul class="dropdown-menu">
+                                                                        <li>
+                                                                            <a class="dropdown-item" href="#">Subsubmenu1</a>
+                                                                        </li>
+                                                                        <li>
+                                                                            <a class="dropdown-item" href="#">Subsubmenu1</a>
+                                                                        </li>
+                                                                    </ul>
+                                                                </li>
+                                                                <li class="dropdown-submenu">
+                                                                    <a class="dropdown-item dropdown-toggle" href="#">Submenu 2</a>
+                                                                    <ul class="dropdown-menu">
+                                                                        <li>
+                                                                            <a class="dropdown-item" href="#">Subsubmenu2</a>
+                                                                        </li>
+                                                                        <li>
+                                                                            <a class="dropdown-item" href="#">Subsubmenu2</a>
+                                                                        </li>
+                                                                    </ul>
+                                                                </li>
+                                                            </ul>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                                <li class="nav-item">
+                                                    <a class="nav-link" href="#">Link</a>
+                                                </li>
+                                                <li class="nav-item">
+                                                    <a class="nav-link" href="#">Link</a>
+                                                </li>
+                                                <li class="nav-item">
+                                                    <a class="nav-link" href="#">Link</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </nav>';
                                     wp_nav_menu( array(
                                         'container' => '',
                                         'theme_location' => 'primary',
