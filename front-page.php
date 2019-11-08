@@ -34,8 +34,7 @@
             </div>                             
         </div>                         
         <?php if ( $editors->have_posts() ) : ?>
-            <div class="row align-items-stretch justify-content-center"> 
-                <div class="col-xl-1"></div>                                 
+            <div class="row align-items-stretch justify-content-center">                                  
                 <?php while ( $editors->have_posts() ) : $editors->the_post(); ?>
                     <?php PG_Helper::rememberShownPost(); ?>
                     <div class="mb-30 col-xl-5 col-lg-6 col-md-10 d-flex" data-aos-duration="500" data-aos="fade-down" data-aos-delay="0"> 
