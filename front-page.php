@@ -44,10 +44,7 @@
                         </div>                                         
                     </div>
                 <?php endwhile; ?>
-                <?php wp_reset_postdata(); ?>                                  
-                <div class="col-xl-1"></div>                                 
-                <div class="col-xl-1"></div>                                                                                                   
-                <div class="col-xl-1"></div>                                 
+                <?php wp_reset_postdata(); ?>                                                                                                                                                                                                       
             </div>
         <?php else : ?>
             <p><?php _e( 'Sorry, no posts matched your criteria.', 'august19' ); ?></p>
