@@ -38,84 +38,25 @@
                             <div class="col-lg-3" data-aos-duration="500" data-aos="fade-down" data-aos-delay="750"> 
                                 <a href="<?php echo esc_url( get_home_url() ); ?>"> <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/imgs/frank-logo.svg" alt="Frankenstein logo" height="70"></a> 
                             </div>                             
-                            <?php if ( has_nav_menu( 'primary' ) ) : ?>
-                                <?php
-                                    PG_Smart_Walker_Nav_Menu::$options['template'] = '<nav class="navbar navbar-expand-md navbar-light bg-light {CLASSES}" data-pg-collapsed id="{ID}">
-                                        <div class="collapse navbar-collapse" id="navbarNavDropdown" data-pg-collapsed>
-                                            <ul class="navbar-nav">
-                                                <li class="nav-item active">
-                                                    <a class="nav-link" {ATTRS}>{TITLE}<span class="sr-only">(current)</span></a>
-                                                </li>
-                                                <li class="nav-item">
-                                                    <a class="nav-link" href="#">Link</a>
-                                                </li>
-                                                <li class="nav-item">
-                                                    <a class="nav-link" href="#">Link</a>
-                                                </li>
-                                                <li class="nav-item dropdown">
-                                                    <a class="nav-link dropdown-toggle" href="http://example.com" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                              Dropdown </a>
-                                                    <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                                        <li>
-                                                            <a class="dropdown-item" href="#">Action</a>
-                                                        </li>
-                                                        <li>
-                                                            <a class="dropdown-item" href="#">Another action</a>
-                                                        </li>
-                                                        <li class="dropdown-submenu">
-                                                            <a class="dropdown-item dropdown-toggle" href="http://google.com">Google</a>
-                                                            <ul class="dropdown-menu">
-                                                                <li>
-                                                                    <a class="dropdown-item" href="#">Submenu</a>
-                                                                </li>
-                                                                <li>
-                                                                    <a class="dropdown-item" href="#">Submenu0</a>
-                                                                </li>
-                                                                <li class="dropdown-submenu">
-                                                                    <a class="dropdown-item dropdown-toggle" href="#">Submenu 1</a>
-                                                                    <ul class="dropdown-menu">
-                                                                        <li>
-                                                                            <a class="dropdown-item" href="#">Subsubmenu1</a>
-                                                                        </li>
-                                                                        <li>
-                                                                            <a class="dropdown-item" href="#">Subsubmenu1</a>
-                                                                        </li>
-                                                                    </ul>
-                                                                </li>
-                                                                <li class="dropdown-submenu">
-                                                                    <a class="dropdown-item dropdown-toggle" href="#">Submenu 2</a>
-                                                                    <ul class="dropdown-menu">
-                                                                        <li>
-                                                                            <a class="dropdown-item" href="#">Subsubmenu2</a>
-                                                                        </li>
-                                                                        <li>
-                                                                            <a class="dropdown-item" href="#">Subsubmenu2</a>
-                                                                        </li>
-                                                                    </ul>
-                                                                </li>
-                                                            </ul>
-                                                        </li>
-                                                    </ul>
-                                                </li>
-                                                <li class="nav-item">
-                                                    <a class="nav-link" href="#">Link</a>
-                                                </li>
-                                                <li class="nav-item">
-                                                    <a class="nav-link" href="#">Link</a>
-                                                </li>
-                                                <li class="nav-item">
-                                                    <a class="nav-link" href="#">Link</a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </nav>';
-                                    wp_nav_menu( array(
-                                        'container' => '',
-                                        'theme_location' => 'primary',
-                                        'items_wrap' => '<div class="col-lg-9 text-right %2$s" data-aos-duration="500" data-aos="fade-down" data-aos-delay="1000" id="%1$s">%3$s</div>',
-                                        'walker' => new PG_Smart_Walker_Nav_Menu()
-                                ) ); ?>
-                            <?php endif; ?> 
+                            <div class="col-lg-9 text-right" data-aos-duration="500" data-aos="fade-down" data-aos-delay="1000">
+                                <nav class="navbar navbar-expand-md navbar-light bg-light">
+                                    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                                        <?php if ( has_nav_menu( 'primary' ) ) : ?>
+                                            <?php
+                                                PG_Smart_Walker_Nav_Menu::$options['template'] = '<li class="nav-item {CLASSES}" id="{ID}">
+                                                        <a class="nav-link" {ATTRS}>{TITLE}<span class="sr-only">(current)</span></a>
+                                                      </li>';
+                                                PG_Smart_Walker_Nav_Menu::$options['current_class'] = 'active';
+                                                wp_nav_menu( array(
+                                                    'container' => '',
+                                                    'theme_location' => 'primary',
+                                                    'items_wrap' => '<ul class="navbar-nav %2$s" id="%1$s">%3$s</ul>',
+                                                    'walker' => new PG_Smart_Walker_Nav_Menu()
+                                            ) ); ?>
+                                        <?php endif; ?>
+                                    </div>
+                                </nav>                                                                                                                                    
+                            </div>                             
                         </div>                         
                     </div>                     
                 </div>                 
