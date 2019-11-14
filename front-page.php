@@ -153,7 +153,7 @@
                                         <?php the_title(); ?>
                                     </div>                                                                                                          
                                     <div class="mt-10 color-heading f-18 medium text-adaptive">
-                                        <?php the_content(); ?>
+                                        <?php echo get_the_excerpt(); ?>
                                     </div>                                                     
                                     <a href="<?php echo esc_url( get_permalink() ); ?>" class="mt-35 btn lg action-2"><?php _e( 'Read more', 'august19' ); ?></a> 
                                 </div>                                                 
