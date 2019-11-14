@@ -11879,6 +11879,7 @@ input[type=radio] + label:before {
 .f-22 {
     font-size: 22px;
     line-height: 32px;
+    text-decoration: underline;
 }
 
 .f-24 {
