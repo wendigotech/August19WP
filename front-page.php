@@ -102,12 +102,12 @@
                         <?php $image_attributes = !empty( get_the_ID() ) ? wp_get_attachment_image_src( PG_Image::isPostImage() ? get_the_ID() : get_post_thumbnail_id( get_the_ID() ), 'full' ) : null; ?>
                         <div class="h-full radius10 pt-55 pb-50 bg-action-2 color-white with_bg_img <?php if($image_attributes) echo 'with_bg_img'; ?>" style="<?php if($image_attributes) echo 'background-image:url(\''.$image_attributes[0].'\')' ?>"> 
                             <div class="row justify-content-center"> 
-                                <div class="col-xl-9 col-10"> 
+                                <div class="col-xl-9 col-10 news-bkg"> 
                                     <div class="mb-15 f-22 title">
                                         <?php the_title(); ?>
                                     </div>                                                     
                                     <div class="text-adaptive">
-                                        <?php the_content( null, true ); ?>
+                                        <?php echo get_the_excerpt(); ?>
                                     </div>                                                     
                                     <a href="<?php echo esc_url( get_permalink() ); ?>" class="mt-40 btn sm action-white f-16"><span class="color-main"><?php _e( 'Read the full story', 'august19' ); ?></span></a> 
                                 </div>                                                 

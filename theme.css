@@ -44,3 +44,7 @@ a:focus {
     position: relative;
     transition: all 2s;
 }
+
+.news-bkg {
+    background-color: rgba(27, 25, 25, 0.73);
+}
