@@ -30,7 +30,7 @@
     <div class="container px-xl-0"> 
         <div class="row justify-content-center"> 
             <div class="col-xl-10 col-lg-12 col-md-10" data-aos-duration="500" data-aos="fade-down" data-aos-delay="0"> 
-                <h2 class="mb-35 small"><?php _e( 'What our readers have to say', 'august19' ); ?></h2> 
+                <h2 class="mb-35 small"><?php _e( 'Our selection', 'august19' ); ?></h2> 
             </div>                             
         </div>                         
         <?php if ( $editors->have_posts() ) : ?>
@@ -54,10 +54,10 @@
     <div class="container px-xl-0 pt-45 pb-45"> 
         <div class="row align-items-center justify-content-center"> 
             <div class="col-xl-7 col-lg-8" data-aos-duration="500" data-aos="fade-down" data-aos-delay="0"> 
-                <h6 class="f-22 regular text-adaptive"><?php _e( 'Two hundred and eighty pages of freakiness 🎃', 'august19' ); ?></h6> 
+                <h6 class="f-22 regular text-adaptive"><?php _e( 'Take a look at all Online Casinos', 'august19' ); ?></h6> 
             </div>                             
             <div class="col-xl-3 col-lg-4 text-lg-right" data-aos-duration="500" data-aos="fade-down" data-aos-delay="250"> 
-                <a href="#" class="mt-30 mt-lg-0 btn lg action-1"><?php _e( 'I want a copy!', 'august19' ); ?></a> 
+                <a href="#" class="mt-30 mt-lg-0 btn lg action-1"><?php _e( 'Click here', 'august19' ); ?></a> 
             </div>                             
         </div>                         
     </div>                     
@@ -77,6 +77,13 @@
     </div>                     
 </section>
 <section class="showcase_10 bg-light pt-100 pb-95"> 
+    <?php
+        $news_args = array(
+            'category_name' => 'news',
+            'order' => 'DESC'
+        )
+    ?>
+    <?php $news = new WP_Query( $news_args ); ?>
     <div class="container px-xl-0"> 
         <div class="row justify-content-center align-items-center align-items-lg-end text-center"> 
             <div class="col-md-8 col-sm-7 text-sm-left" data-aos-duration="500" data-aos="fade-down" data-aos-delay="0"> 
@@ -86,72 +93,32 @@
                 <!-- <a href="#" class="mt-20 mt-sm-0 btn size50 border-gray color-main">Explore Showcase</a> -->                                 
             </div>                             
         </div>                         
-        <div class="mt-40 row align-items-stretch"> 
-            <div class="col-md-6 mb-30" data-aos-duration="500" data-aos="fade-down" data-aos-delay="0"> 
-                <div class="h-full radius10 pt-55 pb-50 bg-action-2 color-white"> 
-                    <div class="row justify-content-center"> 
-                        <div class="col-xl-9 col-10"> 
-                            <div class="mb-15 f-22 title">
-                                <?php _e( 'Did Frankenstein go to the Moon?', 'august19' ); ?>
+        <?php if ( $news->have_posts() ) : ?>
+            <div class="mt-40 row align-items-stretch"> 
+                <?php $news_item_number = 0; ?>
+                <?php while ( $news->have_posts() && $news_item_number++ < 4 ) : $news->the_post(); ?>
+                    <?php PG_Helper::rememberShownPost(); ?>
+                    <div class="col-md-6 mb-30" data-aos-duration="500" data-aos="fade-down" data-aos-delay="0"> 
+                        <div class="h-full radius10 pt-55 pb-50 bg-action-2 color-white"> 
+                            <div class="row justify-content-center"> 
+                                <div class="col-xl-9 col-10"> 
+                                    <div class="mb-15 f-22 title">
+                                        <?php the_title(); ?>
+                                    </div>                                                     
+                                    <div class="text-adaptive">
+                                        <?php the_content( null, true ); ?>
+                                    </div>                                                     
+                                    <a href="<?php echo esc_url( get_permalink() ); ?>" class="mt-40 btn sm action-white f-16"><span class="color-main"><?php _e( 'Read the full story', 'august19' ); ?></span></a> 
+                                </div>                                                 
                             </div>                                             
-                            <div class="text-adaptive"> 
-                                <?php _e( 'There\'s a mystery at the heart of the first Moon landing. And no, it\'s not whether the whole thing was staged. Instead, historians are wondering whether a small company in Manchester helped NASA design its iconic Apollo 11 spacesuit.', 'august19' ); ?> 
-                                <!-- Source: https://www.engadget.com/2019/07/20/frankenstein-and-sons-apollo-spacesuit-design -->                                                 
-                            </div>                                             
-                            <a href="#" class="mt-40 btn sm action-white f-16"><span class="color-main"><?php _e( 'Read the full story', 'august19' ); ?></span></a> 
                         </div>                                         
-                    </div>                                     
-                </div>                                 
-            </div>                             
-            <div class="col-md-6 mb-30" data-aos-duration="500" data-aos="fade-down" data-aos-delay="250"> 
-                <div class="h-full radius10 pt-55 pb-50 bg-action-2 color-white"> 
-                    <div class="row justify-content-center"> 
-                        <div class="col-xl-9 col-10"> 
-                            <div class="mb-15 f-22 title">
-                                <?php _e( 'Step Inside the Legendary Frankenstein’s Castle', 'august19' ); ?>
-                            </div>                                             
-                            <div class="color-heading text-adaptive"> 
-                                <?php _e( 'Situated on a hilltop some 10 miles away from the town of Gernsheim lies the legendary Frankenstein’s Castle overlooking the Rhine. The stories and movies that followed were inspired by a young girl named Mary Shelley. It began in 1814 after she celebrated her 17th birthday while briefly stopping off in the town for a rest before proceeding on.', 'august19' ); ?> 
-                                <!-- Source: https://medium.com/@tonydezenzio/step-inside-the-legendary-frankensteins-castle-172c9747761f -->                                                 
-                            </div>                                             
-                            <a href="#" class="mt-40 btn sm action-white f-16"><?php _e( 'Read the full story', 'august19' ); ?></a> 
-                        </div>                                         
-                    </div>                                     
-                </div>                                 
-            </div>                             
-            <div class="col-md-6 mb-30 mb-md-0" data-aos-duration="500" data-aos="fade-down" data-aos-delay="0"> 
-                <div class="h-full radius10 pt-55 pb-50 bg-action-2 color-white"> 
-                    <div class="row justify-content-center"> 
-                        <div class="col-xl-9 col-10"> 
-                            <div class="mb-15 f-22 title">
-                                <?php _e( '200 Years of Frankenstein', 'august19' ); ?>
-                            </div>                                             
-                            <div class="text-adaptive"> 
-                                <?php _e( 'This year marks the 200th anniversary of Mary Wollstonecraft Shelley’s Frankenstein, a story that has inspired hundreds to interpret the tale across a variety of mediums. Some speculate that there has been at least one adaptation every year since it was first published. Whether through literature, novels, comics, illustration, film or stage, we are definitely obsessed with not just sharing but recreating this story for a multitude of audiences.', 'august19' ); ?> 
-                                <!-- Source: https://medium.com/@strandbookstore/200-years-of-frankenstein-1187d559da07 -->                                                 
-                            </div>                                             
-                            <a href="#" class="mt-40 btn sm action-white f-16"><span class="color-main"><?php _e( 'Read the full story', 'august19' ); ?></span></a> 
-                        </div>                                         
-                    </div>                                     
-                </div>                                 
-            </div>                             
-            <div class="col-md-6" data-aos-duration="500" data-aos="fade-down" data-aos-delay="250"> 
-                <div class="h-full radius10 pt-55 pb-50 color-white with_bg_img"> 
-                    <div class="row justify-content-center"> 
-                        <div class="col-xl-9 col-10"> 
-                            <div class="mb-15 f-22 title">
-                                <?php _e( 'Reading Frankenstein', 'august19' ); ?>
-                            </div>                                             
-                            <div class="text-adaptive"> 
-                                <?php _e( 'When I eat sourdough toast with melted gruyere cheese, Daisy can’t help but look. But since she’s a good girl and doesn’t want me to growl at her, she averts her eyes every time I look her way. Sometimes, she’ll hold my gaze for the briefest moment to check, is this the time to come forward? Might she give me a crust of bread now? She’s expert at assessing when this moment might come, but she errs on the side of caution and waits. She is a good girl, and I love her.', 'august19' ); ?> 
-                                <!-- Source: https://medium.com/@christywrites/reading-frankenstein-dc2e68ab2b58 -->                                                 
-                            </div>                                             
-                            <a href="#" class="mt-40 btn sm action-white f-16"><span class="color-main"><?php _e( 'Read the full story', 'august19' ); ?></span></a> 
-                        </div>                                         
-                    </div>                                     
-                </div>                                 
-            </div>                             
-        </div>                         
+                    </div>
+                <?php endwhile; ?>
+                <?php wp_reset_postdata(); ?>                                                                                                    
+            </div>
+        <?php else : ?>
+            <p><?php _e( 'Sorry, no posts matched your criteria.', 'august19' ); ?></p>
+        <?php endif; ?> 
     </div>                     
 </section>
 <section id="pricingTable" class="pricing_table_7 bg-light pt-105 pb-100 text-center"> 
