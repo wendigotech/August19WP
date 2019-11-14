@@ -11,7 +11,7 @@
         </div>                         
     </div>                     
 </div>
-<section id="testimonials" class="testimonial_6 bg-main pt-105 pb-75 color-white text-center text-sm-left">
+<section class="showcase_10 bg-light pt-100 pb-95"> 
     <?php
         $news_args = array(
             'category_name' => 'news',
@@ -22,7 +22,7 @@
     <div class="container px-xl-0"> 
         <div class="row justify-content-center align-items-center align-items-lg-end text-center"> 
             <div class="col-md-8 col-sm-7 text-sm-left" data-aos-duration="500" data-aos="fade-down" data-aos-delay="0"> 
-                <h2 class="small"><?php _e( 'In the presss', 'august19' ); ?></h2> 
+                <h2 class="small"><?php _e( 'In the press', 'august19' ); ?></h2> 
             </div>                             
             <div class="col-md-4 col-sm-5 text-sm-right" data-aos-duration="500" data-aos="fade-down" data-aos-delay="250"> 
                 <!-- <a href="#" class="mt-20 mt-sm-0 btn size50 border-gray color-main">Explore Showcase</a> -->                                 
@@ -56,6 +56,8 @@
             <p><?php _e( 'Sorry, no posts matched your criteria.', 'august19' ); ?></p>
         <?php endif; ?> 
     </div>                     
+</section>
+<section id="testimonials" class="testimonial_6 bg-main pt-105 pb-75 color-white text-center text-sm-left"> 
     <div class="container px-xl-0">
         <?php the_content(); ?>
     </div>
