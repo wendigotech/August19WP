@@ -34,6 +34,7 @@ a {
 a:hover,
 a:focus {
     background-size: 100% 2px;
+    text-decoration: none;
 }
 
 .dropdown,
