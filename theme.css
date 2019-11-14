@@ -46,7 +46,7 @@ a:focus {
 }
 
 .news-bkg {
-    background-color: rgba(27, 25, 25, 0.73);
+    background-color: rgba(27, 25, 25, 0.5);
     border-radius: 10px;
     padding: 5px;
 }
