@@ -123,10 +123,17 @@
     </div>                     
 </section>
 <section id="pricingTable" class="pricing_table_7 bg-light pt-105 pb-100 text-center"> 
+    <?php
+        $guide_args = array(
+            'category_name' => 'guide',
+            'order' => 'DESC'
+        )
+    ?>
+    <?php $guide = new WP_Query( $guide_args ); ?>
     <div class="container px-xl-0"> 
         <div class="row justify-content-center"> 
             <div class="col-xl-8 col-lg-10" data-aos-duration="500" data-aos="fade-down" data-aos-delay="0"> 
-                <h2 class="mb-15 small"><?php _e( 'For paperback and eBook lovers, whe\'ve got you covered!', 'august19' ); ?></h2> 
+                <h2 class="mb-15 small"><?php _e( 'Get some tips from our Guides', 'august19' ); ?></h2> 
             </div>                             
             <div class="col-xl-6 col-lg-7 col-md-8 col-sm-10" data-aos-duration="500" data-aos="fade-down" data-aos-delay="250"> 
                 <div class="mb-50 f-22 color-heading text-adaptive"> 
@@ -134,50 +141,31 @@
                 </div>                                 
             </div>                             
         </div>                         
-        <div class="row justify-content-center"> 
-            <div class="col-sm-6 col-xs-10" data-aos-duration="500" data-aos="fade-down" data-aos-delay="500"> 
-                <div class="pt-40 pb-45 radius10 inner"> 
-                    <div class="row justify-content-center no-gutters"> 
-                        <div class="col-xl-7 col-lg-8 col-sm-9 col-11"> 
-                            <div class="f-22 title">
-                                <?php _e( '$17.97', 'august19' ); ?>
+        <?php if ( $guide->have_posts() ) : ?>
+            <div class="row justify-content-center"> 
+                <?php while ( $guide->have_posts() ) : $guide->the_post(); ?>
+                    <?php PG_Helper::rememberShownPost(); ?>
+                    <div class="col-sm-6 col-xs-10" data-aos-duration="500" data-aos="fade-down" data-aos-delay="500"> 
+                        <div class="pt-40 pb-45 radius10 inner"> 
+                            <div class="row justify-content-center no-gutters"> 
+                                <div class="col-xl-7 col-lg-8 col-sm-9 col-11"> 
+                                    <div class="f-22 title">
+                                        <?php the_title(); ?>
+                                    </div>                                                                                                          
+                                    <div class="mt-10 color-heading f-18 medium text-adaptive">
+                                        <?php the_content(); ?>
+                                    </div>                                                     
+                                    <a href="<?php echo esc_url( get_permalink() ); ?>" class="mt-35 btn lg action-2"><?php _e( 'Read more', 'august19' ); ?></a> 
+                                </div>                                                 
                             </div>                                             
-                            <div class="mt-25 f-14 text-uppercase semibold sp-20">
-                                <?php _e( 'Free shipping', 'august19' ); ?>
-                            </div>                                             
-                            <div class="mt-10 color-heading f-18 medium text-adaptive"> 
-                                <?php _e( 'Frankenstein is written in the form of a frame story that starts with Captain Robert Walton writing letters to his sister. In the story following the letters by Walton, the readers find that Victor Frankenstein creates a monster that brings tragedy to his life.', 'august19' ); ?> 
-                                <br/>
-                                <br/> 
-                                <?php _e( 'Do you dare to read the tale?', 'august19' ); ?> 
-                            </div>                                             
-                            <a href="#" class="mt-35 btn lg action-2"><?php _e( 'Get the paperback', 'august19' ); ?></a> 
                         </div>                                         
-                    </div>                                     
-                </div>                                 
-            </div>                             
-            <div class="col-sm-6 col-xs-10" data-aos-duration="500" data-aos="fade-down" data-aos-delay="500"> 
-                <div class="pt-40 pb-45 radius10 inner"> 
-                    <div class="row justify-content-center no-gutters"> 
-                        <div class="col-xl-7 col-lg-8 col-sm-9 col-11"> 
-                            <div class="f-22 title">
-                                <?php _e( '$18.51', 'august19' ); ?>
-                            </div>                                             
-                            <div class="mt-25 f-14 text-uppercase semibold sp-20">
-                                <?php _e( 'Instand download', 'august19' ); ?>
-                            </div>                                             
-                            <div class="mt-10 color-heading f-18 medium text-adaptive"> 
-                                <?php _e( 'Victor Frankenstein builds the creature in his laboratory through an ambiguous method consisting of chemistry and alchemy. The monster attempts to fit into human society but is shunned, which leads him to seek revenge against Frankenstein.', 'august19' ); ?> 
-                                <br/>
-                                <br/> 
-                                <?php _e( 'Go ahead, read it...', 'august19' ); ?> 
-                            </div>                                             
-                            <a href="#" class="mt-35 btn lg action-2"><?php _e( 'Get the eBook', 'august19' ); ?></a> 
-                        </div>                                         
-                    </div>                                     
-                </div>                                 
-            </div>                             
-        </div>                         
+                    </div>
+                <?php endwhile; ?>
+                <?php wp_reset_postdata(); ?>                                  
+            </div>
+        <?php else : ?>
+            <p><?php _e( 'Sorry, no posts matched your criteria.', 'august19' ); ?></p>
+        <?php endif; ?> 
     </div>                     
 </section>                
 
