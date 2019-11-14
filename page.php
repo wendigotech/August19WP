@@ -16,18 +16,6 @@
     <div class="container px-xl-0">
         <?php the_content(); ?>
     </div>                     
-</section>
-<section class="call_to_action_11 bg-dark color-white text-center text-lg-left"> 
-    <div class="container px-xl-0 pt-45 pb-45"> 
-        <div class="row align-items-center justify-content-center"> 
-            <div class="col-xl-7 col-lg-8" data-aos-duration="500" data-aos="fade-down" data-aos-delay="0"> 
-                <h6 class="f-22 regular text-adaptive"><?php _e( 'Two hundred and eighty pages of freakiness 🎃', 'august19' ); ?></h6> 
-            </div>                             
-            <div class="col-xl-3 col-lg-4 text-lg-right" data-aos-duration="500" data-aos="fade-down" data-aos-delay="250"> 
-                <a href="#" class="mt-30 mt-lg-0 btn lg action-1"><?php _e( 'I want a copy!', 'august19' ); ?></a> 
-            </div>                             
-        </div>                         
-    </div>                     
 </section>                
 
 <?php get_footer(); ?>
