@@ -151,7 +151,7 @@
                                 <div class="col-xl-7 col-lg-8 col-sm-9 col-11"> 
                                     <div class="f-22 title">
                                         <?php the_title(); ?>
-                                    </div>                                                                                                          
+                                    </div>                                                     
                                     <div class="mt-10 color-heading f-18 medium text-adaptive">
                                         <?php echo get_the_excerpt(); ?>
                                     </div>                                                     
