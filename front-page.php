@@ -62,7 +62,7 @@
         </div>                         
     </div>                     
 </section>
-<section class="content_15 color-white"> 
+<section class="content_15 color-white bonus-loop"> 
     <?php
         $bestbonus_args = array(
             'category_name' => 'bestbonus',
