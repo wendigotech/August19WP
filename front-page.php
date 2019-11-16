@@ -57,7 +57,7 @@
                 <h6 class="f-22 regular text-adaptive"><?php _e( 'Take a look at all Online Casinos', 'august19' ); ?></h6> 
             </div>                             
             <div class="col-xl-3 col-lg-4 text-lg-right" data-aos-duration="500" data-aos="fade-down" data-aos-delay="250"> 
-                <a href="#" class="mt-30 mt-lg-0 btn lg action-1"><?php _e( 'Click here', 'august19' ); ?></a> 
+                <a href="https://sizzlingcasinos.com/casinos/online-casinos/" class="mt-30 mt-lg-0 btn lg action-1"><?php _e( 'Click here', 'august19' ); ?></a> 
             </div>                             
         </div>                         
     </div>                     
