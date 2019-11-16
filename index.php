@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 
 <section>
-    <div class="text-center relative text-md-left container"> 
+    <div class="text-center relative text-md-left container">
         <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/imgs/green-frank-bg.jpg" class="d-none d-md-block ml-700 h-full absolute header_7_bg" alt="Frankenstein's monster. Source: https://wallpaperplay.com/board/frankenstein-wallpapers" data-aos-duration="500" data-aos="fade-down" data-aos-delay="750"/> 
         <div class="pt-230 pb-165 inner mw-570"> 
             <div class="mb-3 logo d-block d-xl-none logo_mobile">
