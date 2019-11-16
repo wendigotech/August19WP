@@ -30,7 +30,7 @@
     <div class="container px-xl-0"> 
         <div class="row justify-content-center"> 
             <div class="col-xl-10 col-lg-12 col-md-10" data-aos-duration="500" data-aos="fade-down" data-aos-delay="0"> 
-                <h2 class="mb-35 small"><?php _e( 'Our selection', 'august19' ); ?></h2> 
+                <h2 class="mb-35 small"><?php _e( 'Our selection of best Casinos', 'august19' ); ?></h2> 
             </div>                             
         </div>                         
         <?php if ( $editors->have_posts() ) : ?>
@@ -63,17 +63,34 @@
     </div>                     
 </section>
 <section class="content_15 pt-580 pb-160 color-white"> 
-    <div class="container px-xl-0"> 
-        <div class="row"> 
-            <div class="col-lg-1"></div>                             
-            <div class="col-lg-7 col-md-10"> 
-                <h2 data-aos-duration="500" data-aos="fade-down" data-aos-delay="0"><?php _e( 'The child of love and light', 'august19' ); ?></h2> 
-                <div class="mt-15 f-22 text-adaptive" data-aos-duration="500" data-aos="fade-down" data-aos-delay="250"> 
-                    <?php _e( 'Mary Wollstonecraft Shelley (née Godwin; 30 August 1797 – 1 February 1851) was an English novelist who wrote the Gothic novel Frankenstein; or, The Modern Prometheus (1818). She also edited and promoted the works of her husband, the Romantic poet and philosopher Percy Bysshe Shelley. Her father was the political philosopher William Godwin, and her mother was the philosopher and feminist Mary Wollstonecraft.', 'august19' ); ?> 
-                    <!-- Background image source: https://www.zedge.net/wallpaper/a8e4e1f3-5228-32ad-9ed8-08423e396b62 -->                                     
-                </div>                                 
+    <?php
+        $bestbonus_args = array(
+            'category_name' => 'bestbonus',
+            'order' => 'DESC'
+        )
+    ?>
+    <?php $bestbonus = new WP_Query( $bestbonus_args ); ?>
+    <div class="container px-xl-0">
+        <div class="row justify-content-center"> 
+            <div class="col-xl-10 col-lg-12 col-md-10 aos-init aos-animate" data-aos-duration="500" data-aos="fade-down" data-aos-delay="0"> 
+                <h2 class="mb-35 small"><?php _e( 'Top Bonus sites', 'august19' ); ?></h2> 
             </div>                             
         </div>                         
+        <?php if ( $bestbonus->have_posts() ) : ?>
+            <div class="row align-items-stretch justify-content-center"> 
+                <?php while ( $bestbonus->have_posts() ) : $bestbonus->the_post(); ?>
+                    <?php PG_Helper::rememberShownPost(); ?>
+                    <div class="mb-30 col-xl-5 col-lg-6 col-md-10 d-flex aos-init aos-animate" data-aos-duration="500" data-aos="fade-down" data-aos-delay="0"> 
+                        <div class="d-flex radius10 block">
+                            <?php the_content(); ?>
+                        </div>                                         
+                    </div>
+                <?php endwhile; ?>
+                <?php wp_reset_postdata(); ?>                                  
+            </div>
+        <?php else : ?>
+            <p><?php _e( 'Sorry, no posts matched your criteria.', 'august19' ); ?></p>
+        <?php endif; ?>
     </div>                     
 </section>
 <section class="showcase_10 bg-light pt-100 pb-95"> 
