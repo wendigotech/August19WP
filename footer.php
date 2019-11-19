@@ -27,12 +27,12 @@
                 <div data-aos-duration="500" data-aos="fade-down" data-aos-delay="0"> 
                     <div class="mt-35 mb-40 hr h-2 bg-white op-3"></div>                     
                 </div>                 
-                <div class="row pg-empty-placeholder">
+                <div class="row">
                     <div class="text-lg-right col-lg-12" data-aos-duration="500" data-aos="fade-down" data-aos-delay="500"> 
-                        <span class="socials d-flex"> <a href="<?php echo get_theme_mod( 'footer_img1_link', '#' ); ?>" class="link color-white mx-15"><img src="<?php echo PG_Image::getUrl( get_theme_mod( 'footer_img1', 'http://pinegrow.com/placeholders/img15.jpg' ), 'large' ) ?>" height="30"></a> <a href="<?php echo get_theme_mod( 'footer_img2_link', '#' ); ?>" class="link color-white mx-15"><img src="<?php echo PG_Image::getUrl( get_theme_mod( 'footer_img2', 'http://pinegrow.com/placeholders/img15.jpg' ), 'large' ) ?>" height="30"></a> <a href="<?php echo get_theme_mod( 'footer_img3_link', '#' ); ?>" class="link color-white ml-15"><img src="<?php echo PG_Image::getUrl( get_theme_mod( 'footer_img3', 'http://pinegrow.com/placeholders/img15.jpg' ), 'large' ) ?>" height="30"></a> </span> 
+                        <span class="socials d-flex"> <a href="<?php echo get_theme_mod( 'footer_img1_link', '#' ); ?>" class="link color-white mx-15"><img src="<?php echo PG_Image::getUrl( get_theme_mod( 'footer_img1', 'http://pinegrow.com/placeholders/img15.jpg' ), 'large' ) ?>" height="30" class="img-fluid"></a> <a href="<?php echo get_theme_mod( 'footer_img2_link', '#' ); ?>" class="link color-white mx-15"><img src="<?php echo PG_Image::getUrl( get_theme_mod( 'footer_img2', 'http://pinegrow.com/placeholders/img15.jpg' ), 'large' ) ?>" height="30" class="img-fluid"></a> <a href="<?php echo get_theme_mod( 'footer_img3_link', '#' ); ?>" class="link color-white ml-15"><img src="<?php echo PG_Image::getUrl( get_theme_mod( 'footer_img3', 'http://pinegrow.com/placeholders/img15.jpg' ), 'large' ) ?>" height="30" class="img-fluid"></a> </span> 
                     </div>
                 </div>
-                <div class="row"> 
+                <div class="row flex-row mt-5"> 
                     <div class="col-lg-6"> 
                         <div class="row"> 
                             <div class="col-xl-4 col-lg-6" data-aos-duration="500" data-aos="fade-down" data-aos-delay="0"> 
