@@ -2,13 +2,13 @@
 
 <section>
     <div class="row pg-empty-placeholder">
-        <div class="text-center relative text-md-left container">                              
-            <div class="inner pb-165 pt-230"> 
+        <div class="relative container">                              
+            <div class="inner"> 
                 <div class="mb-3 logo d-block d-xl-none logo_mobile">
                     <a href="<?php echo esc_url( get_home_url() ); ?>"> <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/imgs/frank-logo.svg" alt="Frankenstein logo" height="60"></a>
                 </div>                                                                                                                                    
             </div>                             
-            <div class="row pg-empty-placeholder">
+            <div class="row pg-empty-placeholder text-center">
                 <?php the_content(); ?>
             </div>
         </div>
