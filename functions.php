@@ -153,18 +153,6 @@ function august19_customize_register( $wp_customize ) {
     ));
     $pgwp_sanitize = function_exists('pgwp_sanitize_placeholder') ? 'pgwp_sanitize_placeholder' : null;
 
-    $wp_customize->add_setting( 'footer_text', array(
-        'type' => 'theme_mod',
-        'default' => __( 'Victor Frankenstein, a young scientist who creates a hideous, sapient creature in an unorthodox scientific experiment.', 'august19' ),
-        'sanitize_callback' => $pgwp_sanitize
-    ));
-
-    $wp_customize->add_control( 'footer_text', array(
-        'label' => __( 'Footer Text', 'august19' ),
-        'type' => 'textarea',
-        'section' => 'footer_section'
-    ));
-
     $wp_customize->add_setting( 'footer_img1_link', array(
         'type' => 'theme_mod',
         'sanitize_callback' => $pgwp_sanitize
@@ -233,6 +221,18 @@ function august19_customize_register( $wp_customize ) {
         'mime_type' => 'image',
         'section' => 'footer_section'
     ) ) );
+
+    $wp_customize->add_setting( 'footer_text', array(
+        'type' => 'theme_mod',
+        'default' => __( 'Victor Frankenstein, a young scientist who creates a hideous, sapient creature in an unorthodox scientific experiment.', 'august19' ),
+        'sanitize_callback' => $pgwp_sanitize
+    ));
+
+    $wp_customize->add_control( 'footer_text', array(
+        'label' => __( 'Footer Text', 'august19' ),
+        'type' => 'textarea',
+        'section' => 'footer_section'
+    ));
 
     /* Pinegrow generated Customizer Controls End */
 
