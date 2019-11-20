@@ -1,17 +1,15 @@
 <?php get_header(); ?>
 
 <section>
-    <div class="row pg-empty-placeholder">
-        <div class="relative container">                              
-            <div class="inner"> 
-                <div class="mb-3 logo d-block d-xl-none logo_mobile">
-                    <a href="<?php echo esc_url( get_home_url() ); ?>"> <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/imgs/frank-logo.svg" alt="Frankenstein logo" height="60"></a>
-                </div>                                                                                                                                    
-            </div>                             
-            <div class="row pg-empty-placeholder text-center">
-                <?php the_content(); ?>
-            </div>
-        </div>
+    <div class="relative container text-center text-md-left">                          
+        <div class="inner pb-165 pt-230 mw-570"> 
+            <div class="mb-3 logo d-block d-xl-none logo_mobile">
+                <a href="<?php echo esc_url( get_home_url() ); ?>"> <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/imgs/frank-logo.svg" alt="Frankenstein logo" height="60"></a>
+            </div>                                                                                                                    
+        </div>                         
+    </div>
+    <div class="container">
+        <?php the_content(); ?>
     </div>
 </section>
 <section id="testimonials" class="testimonial_6 bg-main pt-105 pb-75 color-white text-center text-sm-left">
