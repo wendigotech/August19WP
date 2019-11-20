@@ -110,8 +110,7 @@
                 <?php while ( $news->have_posts() && $news_item_number++ < 4 ) : $news->the_post(); ?>
                     <?php PG_Helper::rememberShownPost(); ?>
                     <div class="col-md-6 mb-30" data-aos-duration="500" data-aos="fade-down" data-aos-delay="0"> 
-                        <?php $image_attributes = !empty( get_the_ID() ) ? wp_get_attachment_image_src( PG_Image::isPostImage() ? get_the_ID() : get_post_thumbnail_id( get_the_ID() ), 'full' ) : null; ?>
-                        <div class="h-full radius10 pt-55 pb-50 bg-action-2 color-white with_bg_img <?php if($image_attributes) echo 'with_bg_img'; ?>" style="<?php if($image_attributes) echo 'background-image:url(\''.$image_attributes[0].'\')' ?>"> 
+                        <div class="h-full radius10 pt-55 pb-50 bg-action-2 color-white"> 
                             <div class="row justify-content-center"> 
                                 <div class="col-xl-9 col-10 news-bkg"> 
                                     <div class="mb-15 f-22 title">
