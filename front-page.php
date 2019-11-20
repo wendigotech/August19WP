@@ -8,7 +8,7 @@
             </div>                                                                                                                    
         </div>                         
     </div>
-    <div class="container">
+    <div class="container-fluid">
         <?php the_content(); ?>
     </div>
 </section>
@@ -113,15 +113,11 @@
                         <div class="h-full radius10 pt-55 pb-50 bg-action-2 color-white"> 
                             <div class="row justify-content-center"> 
                                 <div class="col-xl-9 col-10 news-bkg"> 
-                                    <?php if ( is_singular() ) : ?>
-                                        <div class="mb-15 f-22 title">
-                                            <?php the_title(); ?>
-                                        </div>
-                                    <?php else : ?>
-                                        <div class="mb-15 f-22 title">
-                                            <a href="<?php echo esc_url( get_permalink() ); ?>"><?php the_title(); ?></a>
-                                        </div>
-                                    <?php endif; ?> 
+                                    <a href=""><?php _e( 'Link', 'august19' ); ?><?php if ( is_singular() ) : ?><div class="mb-15 f-22 title">
+                                                <?php the_title(); ?>
+                                            </div><?php else : ?><div class="mb-15 f-22 title">
+                                                <a href="<?php echo esc_url( get_permalink() ); ?>"><?php the_title(); ?></a>
+                                            </div><?php endif; ?></a> 
                                     <div class="text-adaptive">
                                         <?php echo get_the_excerpt(); ?>
                                     </div>                                                     
