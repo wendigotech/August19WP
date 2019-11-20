@@ -31,7 +31,7 @@
             <div class="row align-items-stretch justify-content-center"> 
                 <?php while ( $editors->have_posts() ) : $editors->the_post(); ?>
                     <?php PG_Helper::rememberShownPost(); ?>
-                    <div class="mb-30 col-xl-5 col-lg-6 col-md-10 d-flex" data-aos-duration="500" data-aos="fade-down" data-aos-delay="0"> 
+                    <div class="mb-30 col-lg-6 col-md-10 d-flex col-xl-6" data-aos-duration="500" data-aos="fade-down" data-aos-delay="0"> 
                         <div class="d-flex radius10 block">
                             <?php the_content(); ?>
                         </div>                                         
@@ -113,7 +113,7 @@
                         <div class="h-full radius10 pt-55 pb-50 bg-action-2 color-white"> 
                             <div class="row justify-content-center"> 
                                 <div class="col-xl-9 col-10 news-bkg"> 
-                                    <a href=""><?php _e( 'Link', 'august19' ); ?><?php if ( is_singular() ) : ?><div class="mb-15 f-22 title">
+                                    <a href="" class="text-light"><?php if ( is_singular() ) : ?><div class="mb-15 f-22 title">
                                                 <?php the_title(); ?>
                                             </div><?php else : ?><div class="mb-15 f-22 title">
                                                 <a href="<?php echo esc_url( get_permalink() ); ?>"><?php the_title(); ?></a>
