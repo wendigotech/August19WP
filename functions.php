@@ -276,6 +276,9 @@ if ( ! function_exists( 'august19_enqueue_scripts' ) ) :
     wp_deregister_script( 'bootstrap-1' );
     wp_enqueue_script( 'bootstrap-1', get_template_directory_uri() . '/js/bootstrap.min.js', false, null, true);
 
+    wp_deregister_script( 'pgia' );
+    wp_enqueue_script( 'pgia', get_template_directory_uri() . '/pgia/lib/pgia.js', false, null, true);
+
     /* Pinegrow generated Enqueue Scripts End */
 
         /* Pinegrow generated Enqueue Styles Begin */
