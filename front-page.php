@@ -41,7 +41,14 @@
             </div>
         <?php else : ?>
             <p><?php _e( 'Sorry, no posts matched your criteria.', 'august19' ); ?></p>
-        <?php endif; ?> 
+        <?php endif; ?>
+        <div class="row align-items-stretch justify-content-center"> 
+            <div class="mb-30 col-lg-6 d-flex col-xl-6 col-md-10" data-aos-duration="500" data-aos="fade-down" data-aos-delay="0"> 
+                <div class="d-flex radius10 block">
+                    <?php the_content(); ?>
+                </div>                                 
+            </div>                                                          
+        </div>                         
     </div>                     
 </section>
 <section class="call_to_action_11 bg-dark color-white text-center text-lg-left"> 
