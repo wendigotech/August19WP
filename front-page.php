@@ -31,7 +31,7 @@
             <div class="row align-items-stretch justify-content-center"> 
                 <?php while ( $editors->have_posts() ) : $editors->the_post(); ?>
                     <?php PG_Helper::rememberShownPost(); ?>
-                    <div class="mb-30 col-lg-6 col-md-10 d-flex col-xl-6" data-aos-duration="500" data-aos="fade-down" data-aos-delay="0"> 
+                    <div class="mb-30 col-lg-6 d-flex col-xl-6 col-md-10" data-aos-duration="500" data-aos="fade-down" data-aos-delay="0"> 
                         <div class="d-flex radius10 block">
                             <?php the_content(); ?>
                         </div>                                         
