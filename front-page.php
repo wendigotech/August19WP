@@ -12,8 +12,7 @@
         <?php the_content(); ?>
     </div>
 </section>
-<section id="testimonials" class="testimonial_6 bg-main pt-105 pb-75 color-white text-center text-sm-left"> 
-    <div class="pg-empty-placeholder"></div>
+<section id="testimonials" class="testimonial_6 bg-main pt-105 pb-75 color-white text-center text-sm-left">
     <div class="pg-empty-placeholder"></div>                     
     <?php
         $editors_args = array(
