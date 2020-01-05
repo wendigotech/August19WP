@@ -148,10 +148,26 @@ function august19_customize_register( $wp_customize ) {
 
     /* Pinegrow generated Customizer Controls Begin */
 
+    $wp_customize->add_section( 'logo', array(
+        'title' => __( 'Logo', 'august19' )
+    ));
+
     $wp_customize->add_section( 'footer_section', array(
         'title' => __( 'Footer section', 'august19' )
     ));
     $pgwp_sanitize = function_exists('pgwp_sanitize_placeholder') ? 'pgwp_sanitize_placeholder' : null;
+
+    $wp_customize->add_setting( 'logo1', array(
+        'type' => 'theme_mod',
+        'sanitize_callback' => $pgwp_sanitize
+    ));
+
+    $wp_customize->add_control( new WP_Customize_Media_Control( $wp_customize, 'logo1', array(
+        'label' => __( 'Logo1', 'august19' ),
+        'type' => 'media',
+        'mime_type' => 'image',
+        'section' => 'logo'
+    ) ) );
 
     $wp_customize->add_setting( 'footer_img1_link', array(
         'type' => 'theme_mod',
