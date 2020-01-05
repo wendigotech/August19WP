@@ -147,10 +147,10 @@
             <div class="row justify-content-center"> 
                 <?php while ( $services->have_posts() ) : $services->the_post(); ?>
                     <?php PG_Helper::rememberShownPost(); ?>
-                    <div data-aos-duration="500" data-aos="fade-down" data-aos-delay="500">
+                    <div data-aos-duration="500" data-aos="fade-down" data-aos-delay="500" class="col-xl col-lg col-md col-sm col">
                         <div class="pt-40 pb-45 radius10 inner"> 
                             <div class="row justify-content-center no-gutters"> 
-                                <div>
+                                <div class="col-md col-lg col-xl col-sm col">
                                     <?php the_content(); ?>
                                 </div>                                                 
                             </div>                                             
