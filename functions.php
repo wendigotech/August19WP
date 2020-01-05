@@ -155,6 +155,10 @@ function august19_customize_register( $wp_customize ) {
     $wp_customize->add_section( 'footer_section', array(
         'title' => __( 'Footer section', 'august19' )
     ));
+
+    $wp_customize->add_section( 'logo', array(
+        'title' => __( 'Logo', 'august19' )
+    ));
     $pgwp_sanitize = function_exists('pgwp_sanitize_placeholder') ? 'pgwp_sanitize_placeholder' : null;
 
     $wp_customize->add_setting( 'logo1', array(

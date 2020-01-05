@@ -4,7 +4,7 @@
     <div class="relative container text-center text-md-left"> 
         <div class="inner pt-230 mw-570"> 
             <div class="mb-3 logo d-block d-xl-none logo_mobile">
-                <a href="<?php echo esc_url( get_home_url() ); ?>"> <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/imgs/frank-logo.svg" alt="Frankenstein logo" height="60"></a>
+                <a href="<?php echo esc_url( get_home_url() ); ?>"> <img src="<?php echo PG_Image::getUrl( get_theme_mod( 'logo1', esc_url( get_template_directory_uri() . '/imgs/frank-logo.svg' ) ), 'large' ) ?>" alt="Frankenstein logo" height="60"></a>
             </div>                             
         </div>                         
     </div>
@@ -12,7 +12,7 @@
         <?php the_content(); ?>
     </div>
 </section>
-<section id="testimonials" class="testimonial_6 bg-main pt-105 pb-75 color-white text-center text-sm-left" data-pg-ia="{&quot;l&quot;:[{&quot;trg&quot;:&quot;mousemove&quot;,&quot;mm_a&quot;:&quot;x&quot;,&quot;mm_r&quot;:&quot;50&quot;,&quot;t&quot;:&quot;.d-flex&quot;,&quot;a&quot;:{&quot;n&quot;:&quot;&quot;,&quot;l&quot;:[{&quot;t&quot;:&quot;this&quot;,&quot;l&quot;:[{&quot;t&quot;:&quot;set&quot;,&quot;p&quot;:0,&quot;d&quot;:0,&quot;l&quot;:{&quot;rotationY&quot;:&quot;-15&quot;}},{&quot;t&quot;:&quot;tween&quot;,&quot;p&quot;:0,&quot;d&quot;:1,&quot;l&quot;:{&quot;rotationY&quot;:&quot;15&quot;},&quot;e&quot;:&quot;Linear.easeNone&quot;}]}]}},{&quot;trg&quot;:&quot;mousemove&quot;,&quot;mm_a&quot;:&quot;y&quot;,&quot;mm_r&quot;:&quot;50&quot;,&quot;t&quot;:&quot;.d-flex&quot;,&quot;a&quot;:{&quot;n&quot;:&quot;&quot;,&quot;l&quot;:[{&quot;t&quot;:&quot;&quot;,&quot;l&quot;:[{&quot;t&quot;:&quot;set&quot;,&quot;p&quot;:0,&quot;d&quot;:0,&quot;l&quot;:{&quot;rotationX&quot;:&quot;15&quot;}},{&quot;t&quot;:&quot;tween&quot;,&quot;p&quot;:0,&quot;d&quot;:1,&quot;l&quot;:{&quot;rotationX&quot;:&quot;-15&quot;},&quot;e&quot;:&quot;Linear.easeNone&quot;}]}]}}]}">
+<section id="testimonials" class="testimonial_6 bg-main pt-105 pb-75 color-white text-center text-sm-left">
     <div class="pg-empty-placeholder"></div>                     
     <?php
         $editors_args = array(
