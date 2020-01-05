@@ -4,7 +4,7 @@
     <div class="relative container text-center text-md-left"> 
         <div class="inner pt-230 mw-570"> 
             <div class="mb-3 logo d-block d-xl-none logo_mobile">
-                <a href="<?php echo esc_url( get_home_url() ); ?>"> <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/imgs/frank-logo.svg" alt="Frankenstein logo" height="60"></a>
+                <a href="<?php echo esc_url( get_home_url() ); ?>"> <img src="<?php echo PG_Image::getUrl( get_theme_mod( 'logo1', esc_url( get_template_directory_uri() . '/imgs/frank-logo.svg' ) ), 'large' ) ?>" alt="Frankenstein logo" height="60"></a>
             </div>                             
         </div>                         
     </div>
