@@ -5,7 +5,7 @@
         <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/imgs/green-frank-bg.jpg" class="d-none d-md-block ml-700 h-full absolute header_7_bg" alt="Frankenstein's monster. Source: https://wallpaperplay.com/board/frankenstein-wallpapers" data-aos-duration="500" data-aos="fade-down" data-aos-delay="750"/> 
         <div class="pt-230 pb-165 inner mw-570"> 
             <div class="mb-3 logo d-block d-xl-none logo_mobile">
-                <a href="<?php echo esc_url( get_home_url() ); ?>"> <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/imgs/frank-logo.svg" alt="Frankenstein logo" height="60"></a>
+                <a href="<?php echo esc_url( get_home_url() ); ?>"> <img src="<?php echo PG_Image::getUrl( get_theme_mod( 'logo1', esc_url( get_template_directory_uri() . '/imgs/frank-logo.svg' ) ), 'large' ) ?>" alt="Frankenstein logo" height="60"></a>
             </div>                             
             <h1 data-aos-duration="500" data-aos="fade-down" data-aos-delay="0"><?php _e( 'What does it mean to be human?', 'august19' ); ?></h1> 
             <div class="mt-20 mw-500 color-heading f-18 medium op-7 text-adaptive"> 
